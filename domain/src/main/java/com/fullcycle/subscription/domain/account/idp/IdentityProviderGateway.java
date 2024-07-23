@@ -1,4 +1,4 @@
-package com.fullcycle.subscription.domain.idp;
+package com.fullcycle.subscription.domain.account.idp;
 
 public interface IdentityProviderGateway {
 

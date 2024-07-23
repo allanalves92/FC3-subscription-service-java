@@ -1,5 +1,6 @@
 package com.fullcycle.subscription.domain.idp;
 
+import com.fullcycle.subscription.domain.account.idp.UserId;
 import com.fullcycle.subscription.domain.exceptions.DomainException;
 import org.junit.jupiter.api.Test;
 

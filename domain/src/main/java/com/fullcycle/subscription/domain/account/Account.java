@@ -1,7 +1,7 @@
 package com.fullcycle.subscription.domain.account;
 
 import com.fullcycle.subscription.domain.AggregateRoot;
-import com.fullcycle.subscription.domain.idp.UserId;
+import com.fullcycle.subscription.domain.account.idp.UserId;
 import com.fullcycle.subscription.domain.person.Address;
 import com.fullcycle.subscription.domain.person.Document;
 import com.fullcycle.subscription.domain.person.Email;
