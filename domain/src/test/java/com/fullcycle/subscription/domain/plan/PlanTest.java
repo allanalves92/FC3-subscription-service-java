@@ -272,7 +272,8 @@ public class PlanTest {
         // when
         var actualError = assertThrows(
                 DomainException.class,
-                () -> Plan.with(expectedId, expectedVersion, expectedName, expectedDescription, expectedActive, expectedPrice, expectedCreatedAt, expectedUpdatedAt, expectedDeletedAt)
+                () -> Plan.with(expectedId, expectedVersion, expectedName, expectedDescription, expectedActive,
+                        expectedPrice, expectedCreatedAt, expectedUpdatedAt, expectedDeletedAt)
         );
 
         // then
@@ -534,11 +535,11 @@ public class PlanTest {
         var expectedActive = true;
         var expectedPrice = new Money("BRL", 20.99);
 
-        var actualPlan = Plan.newPlan(expectedId, "Freemium", "Lá", false, expectedPrice);
+        var actualPlan = Plan.newPlan(expectedId, "Freemium", "Lá", false, new Money("USD", 2.99));
         Thread.sleep(1); // Sleep for updatedAt time change
 
         // when
-        actualPlan.execute(new PlanCommand.ChangePlan(expectedName, expectedDescription, expectedActive));
+        actualPlan.execute(new PlanCommand.ChangePlan(expectedName, expectedDescription, expectedPrice, expectedActive));
 
         // then
         assertNotNull(actualPlan);
